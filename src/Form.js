@@ -7,6 +7,11 @@ function Form(props) {
         job: "",
      }
   );
+  
+  function submitForm() {
+    props.handleSubmit(person);
+    setPerson({name: '', job: ''});
+  }
 
   function handleChange(event) {
     const { name, value } = event.target;
@@ -19,10 +24,7 @@ function Form(props) {
          {name: value, job: person['job']}   
        );
   }
-  function submitForm() {
-    props.handleSubmit(person);
-    setPerson({name: '', job: ''});
-  }
+
   return (
     <form> 
       <label htmlFor="name">Name</label>
