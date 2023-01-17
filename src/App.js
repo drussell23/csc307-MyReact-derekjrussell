@@ -1,12 +1,23 @@
-import React from 'react'
-import Table from './Table'
+import logo from './logo.svg';
+import './App.css';
 
-function MyApp(){
+function App() {
   return (
-    <div>
-      <h1> Hello, React! </h1>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+           <code>src/App.js</code> 
+        </p>
+        <a>
+          className="App-link"
+          href="https://reactjs.org/"
+          target="_blank"
+          rel="noopener noreferrer"
+        </a>
+      </header>
     </div>
   );
 }
 
-export default MyApp;
+export default App;
